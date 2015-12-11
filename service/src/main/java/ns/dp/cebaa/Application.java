@@ -1,5 +1,6 @@
-package ns.dp.app;
+package ns.dp.cebaa;
 
+import org.h2.tools.Server;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;

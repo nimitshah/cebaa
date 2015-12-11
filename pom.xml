@@ -25,7 +25,11 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <junit.version>3.8.1</junit.version>
+        <junit.version>4.12</junit.version>
+        <spring-test.version>4.2.3.RELEASE</spring-test.version>
+        <h2.version>1.4.190</h2.version>
+        <maven-exec.version>1.2.1</maven-exec.version>
+        <spring-boot.version>1.3.0.RELEASE</spring-boot.version>
     </properties>
 
     <build>
@@ -43,15 +47,40 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                 </plugin>
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>${maven-exec.version}</version>
+                    <executions>
+                        <execution>
+                            <id>start-h2</id>
+                            <goals>
+                                <goal>exec</goal>
+                            </goals>
+                            <configuration>
+                                <executable>java</executable>
+                                <!-- optional -->
+
+                                <arguments>
+                                    <classpath>${user.home}/.m2/repository/com/h2database/h2/${h2.version}</classpath>
+                                    <argumant>-jar</argumant>
+                                    <argumant>h2-${h2.version}.jar</argumant>
+                                </arguments>
+
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
