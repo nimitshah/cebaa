@@ -15,6 +15,7 @@ local.properties
 
 # Eclipse Core
 .project
+.classpath
 
 # External tool builders
 .externalToolBuilders/
@@ -69,7 +70,7 @@ local.properties
 *.lst
 
 .DS_Store
-
-*/target/
-
+/*/*/target/
+/*/target/**
+target/classes
 *.db

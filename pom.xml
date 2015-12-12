@@ -48,30 +48,6 @@
                     <artifactId>spring-boot-maven-plugin</artifactId>
                 </plugin>
 
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <version>${maven-exec.version}</version>
-                    <executions>
-                        <execution>
-                            <id>start-h2</id>
-                            <goals>
-                                <goal>exec</goal>
-                            </goals>
-                            <configuration>
-                                <executable>java</executable>
-                                <!-- optional -->
-
-                                <arguments>
-                                    <classpath>${user.home}/.m2/repository/com/h2database/h2/${h2.version}</classpath>
-                                    <argumant>-jar</argumant>
-                                    <argumant>h2-${h2.version}.jar</argumant>
-                                </arguments>
-
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
             </plugins>
         </pluginManagement>
     </build>
