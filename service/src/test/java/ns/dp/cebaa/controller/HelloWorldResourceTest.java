@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 @SpringApplicationConfiguration(classes = Application.class)
 @WebAppConfiguration
 @IntegrationTest("server.port:9000")
-public class HelloWorldControllerTest {
+public class HelloWorldResourceTest {
 
     RestTemplate restTemplate = new TestRestTemplate();
 

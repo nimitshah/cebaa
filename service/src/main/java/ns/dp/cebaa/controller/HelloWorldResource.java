@@ -10,11 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Created by nimit on 10/12/2015.
- */
 @RestController
-public class HelloWorldController {
+public class HelloWorldResource {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -22,7 +19,7 @@ public class HelloWorldController {
     @Autowired
     private AccountTypeRepository accountTypeRepository;
 
-    private Logger log = LoggerFactory.getLogger(HelloWorldController.class);
+    private Logger log = LoggerFactory.getLogger(HelloWorldResource.class);
 
     @RequestMapping("/hello/{name}")
     String hello(@PathVariable String name) {
