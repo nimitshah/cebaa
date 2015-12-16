@@ -11,5 +11,12 @@
 
     <artifactId>UISwing</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>ns.dp.cebaa</groupId>
+            <artifactId>service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

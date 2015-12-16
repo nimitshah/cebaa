@@ -12,7 +12,7 @@ public class MainWindowView extends JFrame {
 	private JMenuItem mntmFileFormat;
 	
 	public MainWindowView() {
-		
+		setSize(500,500);
 		menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
@@ -25,5 +25,15 @@ public class MainWindowView extends JFrame {
 		mntmFileFormat = new JMenuItem("File Format");
 		mnTransactionFile.add(mntmFileFormat);
 	}
+
+	public JMenuItem getMntmUpload() {
+		return mntmUpload;
+	}
+
+	public JMenuItem getMntmFileFormat() {
+		return mntmFileFormat;
+	}
+	
+	
 
 }
