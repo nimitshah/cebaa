@@ -21,6 +21,6 @@ public class Application {
     }
 
     public static void shutdown(){
-    	ns.dp.cebaa.Application.close();
+    	//ns.dp.cebaa.Application.close();
     }
 }

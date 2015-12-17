@@ -6,8 +6,8 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 import ns.dp.cebaa.uiswing.Application;
-import ns.dp.cebaa.uiswing.ui.MainWindowView;
-import ns.dp.cebaa.uiswing.ui.TransactionFileFormatView;
+import ns.dp.cebaa.uiswing.view.MainWindowView;
+import ns.dp.cebaa.uiswing.view.TransactionFileFormatView;
 
 public class MainWindowController implements ActionListener, WindowListener {
 

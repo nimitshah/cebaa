@@ -1,4 +1,4 @@
-package ns.dp.cebaa.uiswing.ui;
+package ns.dp.cebaa.uiswing.view;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,7 +27,7 @@ public class TransactionFileFormatView extends JPanel {
 		gbc_lblSelectBankAccount.anchor = GridBagConstraints.WEST;
 		gbc_lblSelectBankAccount.insets = new Insets(0, 0, 5, 5);
 		gbc_lblSelectBankAccount.gridx = 1;
-		gbc_lblSelectBankAccount.gridy = gridy++;
+		gbc_lblSelectBankAccount.gridy = gridy;
 		this.add(lblSelectBankAccount, gbc_lblSelectBankAccount);
 		
 		bankAccountSelect = new JComboBox();
@@ -43,7 +43,7 @@ public class TransactionFileFormatView extends JPanel {
 		gbc_lblFileFormat.anchor = GridBagConstraints.WEST;
 		gbc_lblFileFormat.insets = new Insets(0, 0, 5, 5);
 		gbc_lblFileFormat.gridx = 1;
-		gbc_lblFileFormat.gridy = gridy++;
+		gbc_lblFileFormat.gridy = gridy;
 		this.add(lblFileFormat, gbc_lblFileFormat);
 		
 		fileFormatSelect = new JComboBox();
@@ -59,7 +59,7 @@ public class TransactionFileFormatView extends JPanel {
 		gbc_lblFields.anchor = GridBagConstraints.WEST;
 		gbc_lblFields.insets = new Insets(0, 0, 0, 5);
 		gbc_lblFields.gridx = 1;
-		gbc_lblFields.gridy = 3;
+		gbc_lblFields.gridy = gridy;
 		this.add(lblFields, gbc_lblFields);
 		
 		fields.add(new JComboBox<>());

@@ -1,4 +1,4 @@
-package ns.dp.cebaa.uiswing.ui;
+package ns.dp.cebaa.uiswing.view;
 
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;

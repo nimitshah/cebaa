@@ -1,6 +1,6 @@
 package ns.dp.cebaa.uiswing.controller;
 
-import ns.dp.cebaa.uiswing.ui.TransactionFileFormatView;
+import ns.dp.cebaa.uiswing.view.TransactionFileFormatView;
 
 public class TransactionFileFormatController {
 	private TransactionFileFormatView transactionFileFormatView;
