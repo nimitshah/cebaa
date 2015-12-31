@@ -20,11 +20,11 @@ public class BankAccountService {
 		ba.setBank(bank);
 		
 		BankAccount ba1 = new BankAccount();
-		ba.setAccountHolder("NS");
-		ba.setAccountNumber("12345679");
-		ba.setSortCode("123456");
-		ba.setAccountType("savings");
-		ba.setBank(bank);
+		ba1.setAccountHolder("NS");
+		ba1.setAccountNumber("12345679");
+		ba1.setSortCode("123456");
+		ba1.setAccountType("savings");
+		ba1.setBank(bank);
 		return Arrays.asList(ba, ba1);
 	}
 }

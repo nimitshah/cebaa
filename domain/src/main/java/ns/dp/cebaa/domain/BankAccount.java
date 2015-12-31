@@ -99,4 +99,8 @@ public class BankAccount {
     public void setClosingDate(LocalDate closingDate) {
         this.closingDate = closingDate;
     }
+
+    public String toString(){
+        return sortCode+"-"+accountNumber+"-"+accountType;
+    }
 }
