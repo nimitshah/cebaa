@@ -10,7 +10,7 @@ import ns.dp.cebaa.uiswing.controller.MainWindowController;
 public class Application {
     public static void main(String... a){
         //ns.dp.cebaa.Application.main(a);
-        new MainWindowController();
+        BeanFactory.mainWindowController.init();
 //        SwingUtilities.invokeLater(new Runnable() {
 //
 //			@Override

@@ -10,4 +10,9 @@ public enum TransactionColumnName {
     AMOUNT,
     REFERENCE_NUMBER,
     PAYMENT_TYPE;
+
+    @Override
+    public String toString() {
+        return name();
+    }
 }

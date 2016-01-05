@@ -14,8 +14,11 @@ public class MainWindowController implements ActionListener, WindowListener {
 	private MainWindowView mainWindowView;
 	private TransactionFileFormatController transactionFileFormatController;
 	
-	public MainWindowController() {
-		mainWindowView = new MainWindowView();
+	public MainWindowController(MainWindowView mainWindowView) {
+		this.mainWindowView = mainWindowView;
+	}
+	
+	public void init(){
 		mainWindowView.getMntmFileFormat().addActionListener(this);
 		mainWindowView.addWindowListener(this);
 		mainWindowView.setVisible(true);

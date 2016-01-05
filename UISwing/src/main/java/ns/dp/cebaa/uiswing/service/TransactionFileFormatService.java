@@ -1,6 +1,8 @@
 package ns.dp.cebaa.uiswing.service;
 
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 import ns.dp.cebaa.domain.Bank;
@@ -22,7 +24,7 @@ public class TransactionFileFormatService {
 		ba.setBank(bank);
 		tff.setBankAccount(ba);
 		
-		Set<TransactionColumn> fields = new LinkedHashSet<>();
+		List<TransactionColumn> fields = new ArrayList<>();
 		TransactionColumn col1 = new TransactionColumn();
 		col1.setIndex(1);
 		col1.setTransactionColumnName(TransactionColumnName.TRANSACTION_DATE);
@@ -46,5 +48,13 @@ public class TransactionFileFormatService {
 		tff.setFields(fields);
 		tff.setSeparation(SeparationType.COMMA);
 		return tff;
+	}
+	
+	public void post(TransactionFileFormat tff){
+		
+	}
+	
+	public void put(TransactionFileFormat tff){
+		
 	}
 }

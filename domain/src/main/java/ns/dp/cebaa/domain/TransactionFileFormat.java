@@ -1,6 +1,7 @@
 package ns.dp.cebaa.domain;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -16,7 +17,7 @@ public class TransactionFileFormat {
     private SeparationType separation;
 
     @OneToMany
-    private Set<TransactionColumn> fields;
+    private List<TransactionColumn> fields;
 
     public long getId() {
         return id;
@@ -42,11 +43,11 @@ public class TransactionFileFormat {
         this.separation = separation;
     }
 
-    public Set<TransactionColumn> getFields() {
+    public List<TransactionColumn> getFields() {
         return fields;
     }
 
-    public void setFields(Set<TransactionColumn> fields) {
+    public void setFields(List<TransactionColumn> fields) {
         this.fields = fields;
     }
 }
