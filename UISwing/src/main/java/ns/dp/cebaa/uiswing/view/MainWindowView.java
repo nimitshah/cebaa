@@ -1,5 +1,7 @@
 package ns.dp.cebaa.uiswing.view;
 
+import java.awt.Dimension;
+
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -12,7 +14,7 @@ public class MainWindowView extends JFrame {
 	private JMenuItem mntmFileFormat;
 	
 	public MainWindowView() {
-		setSize(500,500);
+		setSize(600,600);
 		menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
@@ -24,6 +26,7 @@ public class MainWindowView extends JFrame {
 		
 		mntmFileFormat = new JMenuItem("File Format");
 		mnTransactionFile.add(mntmFileFormat);
+		getContentPane().setPreferredSize(new Dimension(500, 500));
 	}
 
 	public JMenuItem getMntmUpload() {

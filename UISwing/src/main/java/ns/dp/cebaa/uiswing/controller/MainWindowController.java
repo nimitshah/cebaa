@@ -6,13 +6,16 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 import ns.dp.cebaa.uiswing.Application;
+import ns.dp.cebaa.uiswing.BeanFactory;
 import ns.dp.cebaa.uiswing.view.MainWindowView;
 import ns.dp.cebaa.uiswing.view.TransactionFileFormatView;
+import ns.dp.cebaa.uiswing.view.TransactionFileUploadView;
 
 public class MainWindowController implements ActionListener, WindowListener {
 
 	private MainWindowView mainWindowView;
 	private TransactionFileFormatController transactionFileFormatController;
+	private TransactionFileUploadController transactionFileUploadController;
 	
 	public MainWindowController(MainWindowView mainWindowView) {
 		this.mainWindowView = mainWindowView;
@@ -20,6 +23,7 @@ public class MainWindowController implements ActionListener, WindowListener {
 	
 	public void init(){
 		mainWindowView.getMntmFileFormat().addActionListener(this);
+		mainWindowView.getMntmUpload().addActionListener(this);
 		mainWindowView.addWindowListener(this);
 		mainWindowView.setVisible(true);
 	}
@@ -28,14 +32,21 @@ public class MainWindowController implements ActionListener, WindowListener {
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource().equals(mainWindowView.getMntmFileFormat())){
 			mainWindowView.getContentPane().removeAll();
-			TransactionFileFormatView tffView = new TransactionFileFormatView();
-			transactionFileFormatController = new TransactionFileFormatController(tffView);
+			TransactionFileFormatView tffView = BeanFactory.transactionFileFormatView;
+			transactionFileFormatController = BeanFactory.transactionFileFormatController;
 			mainWindowView.setContentPane(tffView);
 			mainWindowView.pack();
 			transactionFileFormatController.getTransactionFileFormatView().setVisible(true);
-			//mainWindowView.paint(g);
 		}
-
+		if(e.getSource().equals(mainWindowView.getMntmUpload())){
+			mainWindowView.getContentPane().removeAll();
+			TransactionFileUploadView tfUploadView = BeanFactory.transactionFileUploadView;
+			transactionFileUploadController = BeanFactory.transactionFileUploadController;
+			transactionFileUploadController.init();
+			mainWindowView.setContentPane(tfUploadView);
+			mainWindowView.pack();
+		}
+		mainWindowView.repaint();
 	}
 
 	@Override
